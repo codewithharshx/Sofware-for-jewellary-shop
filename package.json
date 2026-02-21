@@ -1,0 +1,13 @@
+{
+    "name": "satarkar-jewellers-root",
+    "version": "1.0.0",
+    "description": "Billing Software for Satarkar Jewellers",
+    "scripts": {
+        "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+        "start:backend": "cd backend && node index.js",
+        "start:frontend": "cd frontend && npm run dev",
+        "build": "cd frontend && npm run build"
+    },
+    "author": "Antigravity",
+    "license": "ISC"
+}

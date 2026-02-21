@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+@theme {
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Outfit', sans-serif;
+
+    --color-gold-50: #fbf8ed;
+    --color-gold-100: #f5edcf;
+    --color-gold-200: #eadd9a;
+    --color-gold-300: #dbca61;
+    --color-gold-400: #ceb03b;
+    --color-gold-500: #b89127;
+    --color-gold-600: #9e731f;
+    --color-gold-700: #7d561c;
+    --color-gold-800: #68461d;
+    --color-gold-900: #583c1d;
+    --color-gold-950: #33200d;
+}
+
+@layer base {
+    body {
+        @apply font-sans bg-gray-50 text-gray-900 antialiased;
+        background-image:
+            radial-gradient(at 0% 0%, hsla(45, 68%, 85%, 1) 0, transparent 50%),
+            radial-gradient(at 50% 0%, hsla(50, 70%, 95%, 1) 0, transparent 50%),
+            radial-gradient(at 100% 0%, hsla(40, 60%, 90%, 1) 0, transparent 50%);
+        min-height: 100vh;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    .font-display {
+        @apply font-display;
+    }
+}
+
+@layer components {
+    .glass-card {
+        @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl rounded-2xl;
+    }
+
+    .glass-header {
+        @apply bg-gold-900/90 backdrop-blur-lg border-b border-white/10 text-white shadow-2xl;
+    }
+
+    .premium-button {
+        @apply relative overflow-hidden bg-gradient-to-r from-gold-600 to-gold-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:from-gold-700 hover:to-gold-800 hover:shadow-gold-500/30 hover:shadow-lg active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+    }
+
+    .premium-input {
+        @apply w-full px-4 py-3 bg-white/50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-gold-500 focus:border-transparent transition-all duration-200 outline-none hover:bg-white;
+    }
+
+    .tab-button {
+        @apply flex items-center gap-2 px-6 py-2 rounded-full transition-all duration-300 font-medium;
+    }
+
+    .tab-button-active {
+        @apply bg-white text-gold-900 shadow-md transform scale-105;
+    }
+
+    .tab-button-inactive {
+        @apply text-white/70 hover:text-white hover:bg-white/10;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-gold-400/50 rounded-full hover:bg-gold-500;
+}
+
+/* Print optimizations */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+
+    .print-only {
+        display: block !important;
+    }
+
+    body {
+        background: white !important;
+    }
+}
