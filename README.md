@@ -34,7 +34,8 @@ npm run start:frontend
 ```
 The frontend will start on `http://localhost:5173`. Open this URL in your web browser.
 
----
+---<img width="1904" height="1079" alt="Screenshot 2026-02-21 121647" src="https://github.com/user-attachments/assets/075f4a17-1d91-4abb-abab-9c924f81abe9" />
+
 
 ## 🏗 Production Build
 To create a production-ready build of the frontend, run:
