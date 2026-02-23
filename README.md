@@ -12,7 +12,8 @@ The application streamlines invoice generation, pawn loan calculations, and auto
 
 ## 📸 Application Preview
 
-![Application Preview](app_mockup_1771840370277.png)
+![Application Preview](<img width="1904" height="1079" alt="Screenshot 2026-02-21 121647" src="https://github.com/user-attachments/assets/08c7b49e-030a-4ad9-b471-25b74ed755d0" />
+)
 
 ---
 
